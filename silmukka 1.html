@@ -7,7 +7,7 @@
   <body>
     <h1>Tehtävä 1</h1>
     <form class="" action="index.html" method="post">
-  <p>Anna parillinen luku: <input type="text" id="pluku" value=""></p>
+  <p>Anna parillinen luku: <input type="text" id="parillinenluku" value=""></p>
   <button type="button" name="button" onclick="tulostaParilliset()">Tulosta parilliset</button>
   <div id="parilliset"></div>
   </form>
@@ -16,15 +16,15 @@
 
   function tulostaParilliset()
 {
-  var karvo = parseInt(document.getElementById('pluku').value);
-  var jono = "<p>";
-  for(var i = 2; i <= karvo; i= i+2)
+  var k = parseInt(document.getElementById('parillinenluku').value);
+  var j = "<p>";
+  for(var i = 2; i <= k; i= i+2)
   {
-    jono+=i;
-    jono+=" ";
+    j+=i;
+    j+=" ";
   }
-  jono+="</p>";
-    document.getElementById('parilliset').innerHTML = jono;
+  j+="</p>";
+    document.getElementById('parilliset').innerHTML = j;
 }
   </script>
   </body>

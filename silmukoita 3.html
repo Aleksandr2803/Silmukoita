@@ -1,0 +1,30 @@
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Tehtävä 3</h1>
+       <p>Ohjelma, joka tarkastaa, onko antamassasi sanassa ö-kirjainta </p>
+       <p>Anna sana: <input type="text" id="sana" value=""></p>
+       <button type="button" name="button" onclick="tarkistaKirjain()">Onko ö-kirjainta</button>
+       <div id="vastaus"></div>
+       <script type="text/javascript">
+
+         function tarkistaKirjain()
+{
+ var annettuSana = document.getElementById('sana').value;
+ var vastaus = 'ei ole';
+ for(var k = 0; k < annettuSana.length; k++)
+ {
+   if(annettuSana[k] == 'ö' || annettuSana[k] == 'Ö')
+   {
+     vastaus = 'on';
+   }
+ }
+ document.getElementById('vastaus').innerHTML = '<p>' + vastaus + '</p>';
+}
+       </script>
+  </body>
+</html>

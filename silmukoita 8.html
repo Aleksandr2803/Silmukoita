@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Tehtävä 8</h1>
+  <h2>Potenssit</h2>
+  <p>Anna korotettava luku: <input type="text" id="korot" value=""> </p>
+  <p>Anna potenssi: <input type="text" id="potens" value="">  </p>
+<button type="button" id="button" onclick="potenssi()">Laske</button>
+<div id="TulostaLuku"></div>
+    <script type="text/javascript">
+      function potenssi()
+      {
+        var koro = document.getElementById('korot').value;
+        var pote = document.getElementById('potens').value;
+        yht = koro;
+        for(var p = 1; p < pote; p++)
+        {
+          yht *= koro;
+        }
+        document.getElementById('TulostaLuku').innerHTML = '<p>' + yht + '</p>';
+      }
+    </script>
+  </body>
+</html>

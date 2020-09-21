@@ -6,19 +6,19 @@
   </head>
   <body>
     <h1>Tehtävä 6</h1>
-      <p>Kirjoita ohjelma, joka tulostaa 10 ensimmäistä numeroa</p>
-    <button type="button" id="seiska" onclick="ensimmäisetKymmenen()">10 Ensimmäistä</button>
-    <div id="tulosta10"></div>
+      <p>Ohjelma tulostaa 10 ensimmäistä numeroa</p>
+    <button type="button" id="tul10" onclick="ekaKymmenen()">10 Ensimmäistä</button>
+    <div id="tulosta"></div>
     <script type="text/javascript">
-      function ensimmäisetKymmenen()
+      function ekaKymmenen()
 {
-  var kymmenen = '<p>';
+  var kymmenen = "<p>";
   for(var e = 1; e <=10; e++)
   {
-    kymmenen += e + ' ';
+    kymmenen += e + " ";
   }
   kymmenen += '</p>';
-  document.getElementById('tulosta10').innerHTML = kymmenen;
+  document.getElementById('tulosta').innerHTML = kymmenen;
 }
     </script>
   </body>

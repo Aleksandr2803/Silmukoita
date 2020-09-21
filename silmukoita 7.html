@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Tehtävä 6</h1>
+      <p>Ohjelma laskee 10 ensimmäistä numeroa</p>
+    <button type="button" id="lukujenTulostus" onclick="yhteen()">laske 10 Ensimmäistä</button>
+    <div id="tulosta"></div>
+    <script type="text/javascript">
+      function yhteen()
+  {
+    yhteensa = 0;
+    for(var y = 1; y <=10; y++)
+    {
+      yhteensa += y;
+    }
+    document.getElementById('lukujenTulostus').innerHTML = '<p>'+ yhteensa + '</p>';
+  }
+    </script>
+  </body>
+</html>

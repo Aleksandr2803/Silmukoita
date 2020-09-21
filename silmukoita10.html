@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Tehtävä 10</h1>
+    <p>Muokataan salasalatehtävää siten, että se arpoo kirjaimen Ö:n sijasta</p>
+    <p>Anna muokattava salasana:  <input type="text" id="salis" value="">
+  <button type="button" id="button" onclick="changePassword()">Muunna salasanaksi</button>
+  <div id="tulostaLuku"></div>
+    <script type="text/javascript">
+      function changePassword()
+      {
+        var pw = '';
+        var eka, toka;
+        pw = document.getElementById('salis').value;
+        alert(pw);
+        var taulu = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j','k', 'l', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v', 'x', 'y', 'z', 'å', 'ä', 'ö', 'w'];
+        var temp = [];
+        var lop='';
+        for(var s = 0; s < pw.length; s++)
+        {
+          eka = pw[s];
+          //alert[pw];
+
+          temp.push(eka);
+
+
+          var lisa = Math.floor(Math.random()*taulu.length);
+          toka = taulu[lisa];
+          temp.push(toka);
+
+        }
+        lop = temp.join('');
+        document.getElementById('tulostaLuku').innerHTML = lop;
+      }
+
+</script>
+
+    </body>
+        </html>

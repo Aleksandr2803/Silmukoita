@@ -1,0 +1,54 @@
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Tehtävä 11</h1>
+      <p>Ohjelma, joka pyytää käyttäjältä kahta numeroa (jälkimmäisen tulee olla isompi) ja tulostaa tuolla välillä parilliset ja parittomat numerot sekä niiden summat</p>
+      <p>Anna pienempi numero:  <input type="text" id="pnmb" value=""></p>
+      <p>Anna isompi numero:  <input type="text" id="inmb" value=""></p>
+    <button type="button" id="button" onclick="lopputulos()">Näytä</button>
+    <div id="lukujenTulostus"></div>
+
+
+    <script type="text/javascript">
+      function lopputulos()
+{
+  var nmb1, nmb2, pbeg, rbeg, psumma=0, rsumma=0, pnumbers='', rnumbers='';
+  nmb1 = parseInt(document.getElementById('pnmb').value);
+  nmb2 = document.getElementById('inmb').value;
+  if(nmb1%2 == 0)
+  {
+    pbeg = nmb1;
+  }
+  else {
+    pbeg = nmb1+1;
+  }
+  for(var b = pbeg; b<=nmb2; b+=2)
+  {
+    pnumbers += b + ' ';
+    psumma += b;
+
+  }
+  if(nmb1%2 == 0)
+  {
+    rbeg = nmb1+1;
+  }
+  else {
+    rbeg = nmb1;
+  }
+  for(var r = rbeg; r<=nmb2; r+=2)
+  {
+    rnumbers += r + ' ';
+
+    rsumma += r;
+  }
+  document.getElementById('lukujenTulostus').innerHTML = '<p>Parilliset numerot: ' + pnumbers +' ja niiden summa: ' + psumma + '</p><p>Parittomat luvut: ' + rnumbers + ' ja niiden summa: '+ rsumma + '</p>';
+}
+
+    </script>
+  </body>
+</html>
